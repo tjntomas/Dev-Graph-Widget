@@ -1,6 +1,6 @@
 # Dev Graph Widget for HADashboard
 
-This is a graph widget for HADasboard that can display data from 3 sources:
+This is the dev section for the graph widget for HADasboard that can display data from 3 sources:
 * Home Assistant history
 * Influxdb
 * No history, only display incoming updated data as long as the widget is loaded in a dashboard
