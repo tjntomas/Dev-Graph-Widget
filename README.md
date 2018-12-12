@@ -46,13 +46,13 @@ graph_ha:
     min: 10
     time: 12h
     samples: 200
-    title: "Värmesystemet"
+    title: "Heating"
     entities:
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature_2
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature
     titles:
-      - Framledning
-      - Varmvatten
+      - Forward feed
+      - Hotwater
     units: "°C"
     fill: "tozeroy"
     colorIndex: 7
@@ -67,7 +67,7 @@ graph_influxdb:
     min: 10
     time: 12h
     samples: 200
-    title: "Värmesystemet"
+    title: Heating
     units: "°C"
     influxdb_units: 
       - "°C"
@@ -76,8 +76,8 @@ graph_influxdb:
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature_2
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature
     titles:
-      - Framledning
-      - Varmvatten
+      - Forward feed
+      - Hotwater
     fill: "tozeroy"
     colorIndex: 7
     value_in_legend: 1
@@ -88,14 +88,14 @@ graph_latest:
     widget_type: hagraph
     max: 70
     min: 10
-    title: "Värmesystemet"
+    title: Heating
     units: "°C"
     entities:
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature_2
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature
     titles:
-      - Framledning
-      - Varmvatten
+      - Forward feed
+      - Hotwater
     fill: "tozeroy"
     colorIndex: 7
     value_in_legend: 1
