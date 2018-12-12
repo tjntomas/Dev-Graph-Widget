@@ -45,7 +45,6 @@ graph_ha:
     max: 70 # Optional. Set the max y-axis. Remove to fit the traces automatically.
     min: 10 # Optional. Set the min y-axis. Remove to fit the traces automatically.
     time: 12h  # Time interval to plot. you can combine w, d, h and m as 2w1d3h20m (This would be 2 weeks, 1 day, 3 hours and 20 minutes)
-    samples: 200
     title: "Heating"
     entities:
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature_2
