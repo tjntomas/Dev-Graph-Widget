@@ -114,8 +114,8 @@ function Custom_Data(self){
     trace_number = 0
     // Now, populate the array with data for each trace.
     for ( value of my_data_source){
-        self.MyDataSeriesArray[trace_number] = values.time_data   //  The time stamp or the x axis data
-        self.MyDataSeriesArray[trace_number + 1 ] = values.y_axis_data  // The y axis data to be plotted
+        self.MyDataSeriesArray[trace_number] = value.time_data   //  The time stamp or the x axis data
+        self.MyDataSeriesArray[trace_number + 1 ] = value.y_axis_data  // The y axis data to be plotted
       }
       
       // and call the plotter function
