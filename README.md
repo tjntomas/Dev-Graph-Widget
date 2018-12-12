@@ -25,10 +25,10 @@ graph_y_axis_text_color: "#aaaaaa"
 graph_influxdb_path: http://path_to_your_influxdb_server:8086
 graph_influxdb_path_local: http://local_path_to_your_influxdb_server:8086
 graph_widget_style: "border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;"
-graph_trace_colors: "1.1"
-graph_fill_colors: "1.1"
-graph_bar_colors: "1.1"
-graph_bar_multi: "1.1"
+graph_trace_colors: "1"  # Set the opacity for the trace colors.
+graph_fill_colors: "1"   # Set the opacity for the fill colors.
+graph_bar_colors: "1"    # Set the opacity for the bar colors.
+graph_bar_multi: "1"     # Leave this as is
 graph_user: YOUR_INFLUXDB_USER_NAME  # only needed if you have activated authentication for influxdb
 graph_password: YOUR_INFLUXDB_PASSWORD  # only needed if you have activated authentication for influxdb
 graph_degrees_celsius_text: "Degrees Celsius" # Adjust to your own language if needed.
@@ -42,9 +42,9 @@ example dashboards for each of the possible history types:
 ````yaml
 graph_ha:
     widget_type: hagraph
-    max: 70
-    min: 10
-    time: 12h
+    max: 70 # Optional. Set the max y-axis. Remove to fit the traces automatically.
+    min: 10 # Optional. Set the min y-axis. Remove to fit the traces automatically.
+    time: 12h  # Time interval to plot. you can combine w, d, h and m as 2w1d3h20m (This would be 2 weeks, 1 day, 3 hours and 20 minutes)
     samples: 200
     title: "Heating"
     entities:
@@ -53,9 +53,10 @@ graph_ha:
     titles:
       - Forward feed
       - Hotwater
-    units: "°C"
-    fill: "tozeroy"
-    colorIndex: 7
+    units: "°C"  # The unit_of_measurement for your sensors/entities
+    fill: "tozeroy" # options are  "none" | "tozeroy" | "tozerox" | "tonexty" | "tonextx" | "toself" 
+    colorIndex: 7  # A number between 0 and 11. 12 colors for the traces are predefined and the colorIndex defines 
+    # which is used for the first trace. If more than 12 traces/entities are specified, the colors are rotated
     height: 300
     value_in_legend: 1
     log: 1
@@ -63,12 +64,12 @@ graph_ha:
 
 graph_influxdb:
     widget_type: hagraph
-    max: 70
-    min: 10
+    max: 70 # Optional. Set the max y-axis. Remove to fit the traces automatically.
+    min: 10 # Optional. Set the min y-axis. Remove to fit the traces automatically.
     time: 12h
     samples: 200
     title: Heating
-    units: "°C"
+    units: "°C"   # The unit_of_measurement for your sensors/entities
     influxdb_units: 
       - "°C"
       - "°C"
@@ -78,26 +79,28 @@ graph_influxdb:
     titles:
       - Forward feed
       - Hotwater
-    fill: "tozeroy"
-    colorIndex: 7
+    fill: "tozeroy" # options are  "none" | "tozeroy" | "tozerox" | "tonexty" | "tonextx" | "toself" 
+    colorIndex: 7 # A number between 0 and 11. 12 colors for the traces are predefined and the colorIndex defines 
+    # which is used for the first trace. If more than 12 traces/entities are specified, the colors are rotated
     value_in_legend: 1
     height: 300
     history_type: influxdb
 
 graph_latest:
     widget_type: hagraph
-    max: 70
-    min: 10
+    max: 70 # Optional. Set the max y-axis. Remove to fit the traces automatically.
+    min: 10 # Optional. Set the min y-axis. Remove to fit the traces automatically.
     title: Heating
-    units: "°C"
+    units: "°C"   # The unit_of_measurement for your sensors/entities
     entities:
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature_2
       - sensor.fibaro_system_fgbs001_universal_binary_sensor_temperature
     titles:
       - Forward feed
       - Hotwater
-    fill: "tozeroy"
-    colorIndex: 7
+    fill: "tozeroy" # options are  "none" | "tozeroy" | "tozerox" | "tonexty" | "tonextx" | "toself" 
+    colorIndex: 7 # A number between 0 and 11. 12 colors for the traces are predefined and the colorIndex defines 
+    # which is used for the first trace. If more than 12 traces/entities are specified, the colors are rotated
     value_in_legend: 1
     height: 300
     history_type: none
