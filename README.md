@@ -88,8 +88,6 @@ graph_latest:
     widget_type: hagraph
     max: 70
     min: 10
-    time: 12h
-    samples: 200
     title: "Värmesystemet"
     units: "°C"
     entities:
