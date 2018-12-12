@@ -31,9 +31,9 @@ graph_bar_colors: "1.1"
 graph_bar_multi: "1.1"
 graph_user: YOUR_INFLUXDB_USER_NAME  # only needed if you have activated authentication for influxdb
 graph_password: YOUR_INFLUXDB_PASSWORD  # only needed if you have activated authentication for influxdb
-graph_degrees_celsius_text: "Grader Celsius"
-graph_degrees_fahrenheit_text: "Grader Fahrenheit"
-graph_percent_text: "Procent"
+graph_degrees_celsius_text: "Degrees Celsius" # Adjust to your own language if needed.
+graph_degrees_fahrenheit_text: "Degrees Fahrenheit" Adjust to your own language if needed.
+graph_percent_text: "Percent"  Adjust to your own language if needed.
 hagraph_path: http://path_to_your_home_assistance_instance:8123  # will change name to base_url or similar
 hagraph_token: YOUR_LONG_LIVED_ACCESS_TOKEN # Can be created through the Home Assistant front end.
 ````
