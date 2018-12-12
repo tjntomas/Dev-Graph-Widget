@@ -1,4 +1,5 @@
-# Dev Graph Widget for HADashboard - ONLY SUPPOSED TO BE USED FOR TESTING BEFORE MOVED TO THE "READY" WIDGETS.
+## Dev Graph Widget for HADashboard - 
+### ONLY SUPPOSED TO BE USED FOR TESTING BEFORE BEEING MOVED TO THE "READY" WIDGETS. Use the ready widgets [here](https://github.com/tjntomas/HADashboard-widgets) instead.
 
 This is the dev section for the graph widget for HADasboard that can display data from 3 sources:
 * Home Assistant history
