@@ -104,3 +104,21 @@ graph_latest:
     height: 300
     history_type: none
 ````
+
+## Adding other data source
+If you would like to add code to the widget to plot data from other source, you need to write a function
+````javascript
+function Custom_Data(self){
+	self.MyDataSeriesArray = new Array(self.number_of_entities * 2)
+    
+    trace_number = 0
+    // Now, populate the array with data for each trace.
+    for ( value of my_data_source){
+        self.MyDataSeriesArray[trace_number] = values.time_data   //  The time stamp or the x axis data
+        self.MyDataSeriesArray[trace_number + 1 ] = values.y_axis_data  // The y axis data to be plotted
+      }
+      
+      // and call the plotter function
+      MultiPlot(self, self.MyDataSeriesArray)
+}
+        
