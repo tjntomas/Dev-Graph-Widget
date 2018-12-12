@@ -3,7 +3,7 @@
 This is the dev section for the graph widget for HADasboard that can display data from 3 sources:
 * Home Assistant history
 * Influxdb
-* No history, only display incoming updated data as long as the widget is loaded in a dashboard
+* No history, only display incoming updated data as long as the widget is loaded in a dashboard. This menas that the graph will be empty until at least one update has been received.
 
 Which data source that is used depends on the widget setting
 ````
