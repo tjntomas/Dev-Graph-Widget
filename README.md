@@ -13,7 +13,7 @@ history_type: ha  # options are ha|influxdb|none
 To use the widget, you need to:
 1. copy the basehagraph folder to your custom_widgets folder
 2. copy plotly-latest.min.js from the custom_css folder to your custom_css folder
-3. add the following to the varialbes.yaml file of the skin you are using:
+3. add the following to the variables.yaml file of the skin you are using:
 ````yaml
 graph_style: "border-radius: 0px; $background_style_graph"
 graph_legend_text_color: "#cccccc"
