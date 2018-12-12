@@ -15,7 +15,7 @@ To use the widget, you need to:
 2. copy plotly-latest.min.js from the custom_css folder to your custom_css folder
 3. add the following to the variables.yaml file of the skin you are using:
 ````yaml
-graph_style: "border-radius: 0px; $background_style_graph"
+graph_style: "border-radius: 0px; $background_style"
 graph_legend_text_color: "#cccccc"
 graph_grid_color: "#888888"
 graph_title_color: "#aaaaaa"
