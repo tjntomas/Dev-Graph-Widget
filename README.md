@@ -108,7 +108,7 @@ graph_latest:
 ## Adding other data sources
 If you would like to add code to the widget to plot data from other source, you need to write a function
 ````javascript
-function Custom_Data(self){
+function DrawCustomData(self){
 	self.MyDataSeriesArray = new Array(self.number_of_entities * 2)
     
     trace_number = 0
@@ -129,7 +129,7 @@ function Custom_Data(self){
 			DrawHaGraph(self) 
 			break
 		case "my_data_source":      // Add this section
-			Custom_Data(self)
+			DrawCustomData(self)
 			break;		
 	}
 	
@@ -148,7 +148,7 @@ function OnStateUpdate(self, state){
 				DrawLatestGraph(self, state)
 				break
 			case "my_data_source":     // Add this section
-				Custom_Data(self)
+				DrawCustomData(self)
 				break;
 				
 		}
