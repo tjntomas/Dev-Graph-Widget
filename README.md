@@ -109,7 +109,7 @@ graph_latest:
 If you would like to add code to the widget to plot data from other source, you need to write a function
 ````javascript
 function DrawCustomData(self){
-	self.MyDataSeriesArray = new Array(self.number_of_entities * 2)
+    self.MyDataSeriesArray = new Array(self.number_of_entities * 2)
     
     trace_number = 0
     // Now, populate the array with data for each trace.
