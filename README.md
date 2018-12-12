@@ -29,7 +29,7 @@ graph_trace_colors: "1.1"
 graph_fill_colors: "1.1"
 graph_bar_colors: "1.1"
 graph_bar_multi: "1.1"
-graph_user: "admin"  # only needed if you have activated authentication for influxdb
+graph_user: YOUR_INFLUXDB_USER_NAME  # only needed if you have activated authentication for influxdb
 graph_password: YOUR_INFLUXDB_PASSWORD  # only needed if you have activated authentication for influxdb
 graph_degrees_celsius_text: "Grader Celsius"
 graph_degrees_fahrenheit_text: "Grader Fahrenheit"
