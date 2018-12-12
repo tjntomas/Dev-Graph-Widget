@@ -105,7 +105,7 @@ graph_latest:
     history_type: none
 ````
 
-## Adding other data source
+## Adding other data sources
 If you would like to add code to the widget to plot data from other source, you need to write a function
 ````javascript
 function Custom_Data(self){
