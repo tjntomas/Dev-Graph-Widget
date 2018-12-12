@@ -121,4 +121,38 @@ function Custom_Data(self){
       // and call the plotter function
       MultiPlot(self, self.MyDataSeriesArray)
 }
+
+// Adjust this just after WidgetBase.call()
+
+	switch (self.parameters.history_type){
+		case "ha":
+			DrawHaGraph(self) 
+			break
+		case "my_data_source":      // Add this section
+			Custom_Data(self)
+			break;
+			
+	}
+// Adjust the function
+function OnStateUpdate(self, state){
+		// Log that new data has been received.
+		Logger(self,"New value for " + self.parameters.entities[0] + ": " + state.state)
+		// Update graph.
+		switch (self.parameters.history_type){
+			case "influxdb":
+				DrawInfluxdbGraph(self, state)
+				break
+			case "ha":
+				DrawHaGraph(self)
+				break
+			case "none":
+				DrawLatestGraph(self, state)
+				break
+			case "my_data_source":     // Add this section
+				Custom_Data(self)
+				break;
+				
+		}
+	}
+
         
